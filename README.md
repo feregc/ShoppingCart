@@ -30,7 +30,7 @@ PM> Update-Database
 Y con eso la Base de datos se creará con los diferente tablas que corresponden a los modelos del proyecto.
 
 ### 3. Correr el proyecto
-Este proyecto tiene una interfaz super sencilla, pero amigable en la que se pueden hacer los diferentes peticiones http.
+Este proyecto tiene una interfaz intuitiva, pero amigable en la que se pueden hacer los diferentes peticiones http.
 
 Ya que este proyecto utiliza la autorización entoces primero debemos crear un usuario para poder usar cualquier metodo de los controladores. Para ello seguir lo siguiente:
 
