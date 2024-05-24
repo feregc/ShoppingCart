@@ -1,5 +1,5 @@
-﻿using Moq;
-using NUnit.Framework;
+﻿using Microsoft.EntityFrameworkCore;
+using Moq;
 using ShoppingCartApi.Data;
 using ShoppingCartApi.Models;
 using ShoppingCartApi.Repositories;
@@ -9,68 +9,99 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace ShoppingCartApi.Tests.Tests.Repositories
 {
-    [TestFixture]
     public class ClientRepositoryTests
     {
-        private Mock<ApplicationDbContext> _mockContext;
-        private IClientRepository _clientRepository;
+        private readonly Mock<ApplicationDbContext> _mockContext;
+        private readonly ClientRepository _repository;
 
-        [SetUp]
-        public void Setup()
+        public ClientRepositoryTests()
         {
-            _mockContext = new Mock<ApplicationDbContext>();
-            _clientRepository = new ClientRepository(_mockContext.Object);
+            _mockContext = new Mock<ApplicationDbContext>(new DbContextOptions<ApplicationDbContext>());
+            _repository = new ClientRepository(_mockContext.Object);
         }
 
-        [Test]
-        public async Task GetAllClientsAsync_ReturnsListOfClients()
+        [Fact]
+        public async Task GetAllClientsAsync_ReturnsAllClients()
         {
-            var clients = new List<Client> { new Client(), new Client() };
-            var mockDbSet = TestUtils.GetQueryableMockDbSet(clients);
-            _mockContext.Setup(x => x.Clients).Returns(mockDbSet.Object);
+            var clients = new List<Client> { new Client { Id = 1, Name = "Client1" }, new Client { Id = 2, Name = "Client2" } };
+            var queryableClients = clients.AsQueryable(); // Convertimos la lista a IQueryable
 
-            var result = await _clientRepository.GetAllClientsAsync();
+            var mockSet = new Mock<DbSet<Client>>();
+            mockSet.As<IAsyncEnumerable<Client>>().Setup(m => m.GetAsyncEnumerator(default)).Returns(new TestAsyncEnumerator<Client>(clients.GetEnumerator()));
+            mockSet.As<IQueryable<Client>>().Setup(m => m.Provider).Returns(new TestAsyncQueryProvider<Client>(queryableClients.Provider));
+            mockSet.As<IQueryable<Client>>().Setup(m => m.Expression).Returns(queryableClients.Expression);
+            mockSet.As<IQueryable<Client>>().Setup(m => m.ElementType).Returns(queryableClients.ElementType);
+            mockSet.As<IQueryable<Client>>().Setup(m => m.GetEnumerator()).Returns(queryableClients.GetEnumerator());
 
-            Assert.Equals(clients.Count, result.Count);
+            _mockContext.Setup(c => c.Clients).Returns(mockSet.Object);
+
+            var result = await _repository.GetAllClientsAsync();
+
+            Xunit.Assert.Equal(2, result.Count);
         }
 
-        [Test]
+        [Fact]
         public async Task GetClientByIdAsync_ReturnsClient()
         {
-            var client = new Client { Id = 1 };
-            _mockContext.Setup(x => x.Clients.FindAsync(1)).ReturnsAsync(client);
+            var client = new Client { Id = 1, Name = "Client1" };
+            _mockContext.Setup(c => c.Clients.FindAsync(1)).ReturnsAsync(client);
 
-            var result = await _clientRepository.GetClientByIdAsync(1);
+            var result = await _repository.GetClientByIdAsync(1);
 
-            Assert.Equals(client.Id, result.Id);
+            Xunit.Assert.Equal("Client1", result.Name);
         }
 
-        [Test]
-        public async Task CreateUpdateAsync_CreatesNewClient()
+        [Fact]
+        public async Task CreateUpdateAsync_AddsNewClient()
         {
-            var client = new Client { Id = 0 };
-            _mockContext.Setup(x => x.Clients.AddAsync(client, default));
+            var client = new Client { Name = "New Client" };
+            var mockSet = new Mock<DbSet<Client>>();
+            _mockContext.Setup(c => c.Clients).Returns(mockSet.Object);
 
-            var result = await _clientRepository.CreateUpdateAsync(client);
+            await _repository.CreateUpdateAsync(client);
 
-            _mockContext.Verify(x => x.Clients.AddAsync(client, default), Times.Once);
-            Assert.Equals(client, result);
+            mockSet.Verify(m => m.AddAsync(It.IsAny<Client>(), default), Times.Once());
+            _mockContext.Verify(c => c.SaveChangesAsync(default), Times.Once());
         }
 
-        [Test]
+        [Fact]
+        public async Task CreateUpdateAsync_UpdatesExistingClient()
+        {
+            var client = new Client { Id = 1, Name = "Updated Client" };
+            var mockSet = new Mock<DbSet<Client>>();
+            _mockContext.Setup(c => c.Clients).Returns(mockSet.Object);
+
+            await _repository.CreateUpdateAsync(client);
+
+            mockSet.Verify(m => m.Update(It.IsAny<Client>()), Times.Once());
+            _mockContext.Verify(c => c.SaveChangesAsync(default), Times.Once());
+        }
+
+        [Fact]
         public async Task DeleteClientAsync_DeletesClient()
         {
-            var client = new Client { Id = 1 };
-            _mockContext.Setup(x => x.Clients.FindAsync(1)).ReturnsAsync(client);
-            _mockContext.Setup(x => x.Clients.Remove(client));
+            var client = new Client { Id = 1, Name = "Client1" };
+            _mockContext.Setup(c => c.Clients.FindAsync(1)).ReturnsAsync(client);
 
-            var result = await _clientRepository.DeleteClientAsync(1);
+            var result = await _repository.DeleteClientAsync(1);
 
-            _mockContext.Verify(x => x.Clients.Remove(client), Times.Once);
-            Assert.That(result);
+            Xunit.Assert.True(result);
+            _mockContext.Verify(c => c.Clients.Remove(It.IsAny<Client>()), Times.Once());
+            _mockContext.Verify(c => c.SaveChangesAsync(default), Times.Once());
+        }
+
+        [Fact]
+        public async Task DeleteClientAsync_ClientNotFound()
+        {
+            _mockContext.Setup(c => c.Clients.FindAsync(1)).ReturnsAsync((Client)null);
+
+            var result = await _repository.DeleteClientAsync(1);
+
+            Xunit.Assert.False(result);
         }
     }
 }

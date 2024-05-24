@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZfwP9PiZ7qXBuHUa3zyXVBtEVYHmO9aSnWGUsJqfXxnrkjxJGI7L2PklvcmIDemkS6/lPwEgXKIH9cM5H/+FeQ==",
+  "dgSpecHash": "Ip1JXnk+QKxCWu0zmjfzFCEdlV+Wlcj2dbW0YLiz23XFQdx6l5PRXbbGllcM5smG7xG1S9kEYJy5HKuDv7kSEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartAPI\\ShoppingCartApi.Tests\\ShoppingCartApi.Tests.csproj",
   "expectedPackageFiles": [
@@ -137,8 +137,6 @@
     "C:\\Users\\gfern\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\nunit\\4.1.0\\nunit.4.1.0.nupkg.sha512",
-    "C:\\Users\\gfern\\.nuget\\packages\\nunit.analyzers\\4.2.0\\nunit.analyzers.4.2.0.nupkg.sha512",
-    "C:\\Users\\gfern\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.6.2\\swashbuckle.aspnetcore.annotations.6.6.2.nupkg.sha512",
@@ -183,7 +181,14 @@
     "C:\\Users\\gfern\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\gfern\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\gfern\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\gfern\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit\\2.8.0\\xunit.2.8.0.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit.analyzers\\1.13.0\\xunit.analyzers.1.13.0.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit.assert\\2.8.0\\xunit.assert.2.8.0.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit.core\\2.8.0\\xunit.core.2.8.0.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit.extensibility.core\\2.8.0\\xunit.extensibility.core.2.8.0.nupkg.sha512",
+    "C:\\Users\\gfern\\.nuget\\packages\\xunit.extensibility.execution\\2.8.0\\xunit.extensibility.execution.2.8.0.nupkg.sha512"
   ],
   "logs": []
 }

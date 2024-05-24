@@ -266,3 +266,4 @@ C:\Users\gfern\OneDrive\Documents\Cursos\asp.net\ShoppingCartAPI\ShoppingCartApi
 C:\Users\gfern\OneDrive\Documents\Cursos\asp.net\ShoppingCartAPI\ShoppingCartApi\bin\Debug\net8.0\Moq.dll
 C:\Users\gfern\OneDrive\Documents\Cursos\asp.net\ShoppingCartAPI\ShoppingCartApi\bin\Debug\net8.0\nunit.framework.dll
 C:\Users\gfern\OneDrive\Documents\Cursos\asp.net\ShoppingCartAPI\ShoppingCartApi\bin\Debug\net8.0\nunit.framework.legacy.dll
+C:\Users\gfern\OneDrive\Documents\Cursos\asp.net\ShoppingCartAPI\ShoppingCartApi\obj\Debug\net8.0\ShoppingCartApi.sourcelink.json
