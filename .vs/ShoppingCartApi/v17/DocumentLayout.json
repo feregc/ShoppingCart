@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C8DD8794-05BB-48AA-9C8F-572DBA84B9EE}|ShoppingCartApi.Tests\\ShoppingCartApi.Tests.csproj|c:\\users\\gfern\\onedrive\\documents\\cursos\\asp.net\\shoppingcartapi\\shoppingcartapi.tests\\tests\\repositories\\paymentrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DD8794-05BB-48AA-9C8F-572DBA84B9EE}|ShoppingCartApi.Tests\\ShoppingCartApi.Tests.csproj|solutionrelative:shoppingcartapi.tests\\tests\\repositories\\paymentrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{86CA8C51-15B7-482E-A605-980594E5D837}|ShoppingCartApi\\ShoppingCartApi.csproj|c:\\users\\gfern\\onedrive\\documents\\cursos\\asp.net\\shoppingcartapi\\shoppingcartapi\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86CA8C51-15B7-482E-A605-980594E5D837}|ShoppingCartApi\\ShoppingCartApi.csproj|solutionrelative:shoppingcartapi\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,6 +51,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PaymentRepositoryTests.cs",
+              "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi.Tests\\Tests\\Repositories\\PaymentRepositoryTests.cs",
+              "RelativeDocumentMoniker": "ShoppingCartApi.Tests\\Tests\\Repositories\\PaymentRepositoryTests.cs",
+              "ToolTip": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi.Tests\\Tests\\Repositories\\PaymentRepositoryTests.cs",
+              "RelativeToolTip": "ShoppingCartApi.Tests\\Tests\\Repositories\\PaymentRepositoryTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T22:26:09.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi\\Models\\Payment.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi\\Models\\Payment.cs",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ClientRepositoryTests.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi.Tests\\Tests\\Repositories\\ClientRepositoryTests.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi.Tests\\Tests\\Repositories\\ClientRepositoryTests.cs",
@@ -67,12 +84,11 @@
               "RelativeToolTip": "ShoppingCartApi.Tests\\Tests\\Repositories\\ClientRepositoryTests.cs",
               "ViewState": "AQIAAEYAAAAAAAAAAAAswGsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T22:17:31.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T22:17:31.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OrderRepositoryTests.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi.Tests\\Tests\\Repositories\\OrderRepositoryTests.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi.Tests\\Tests\\Repositories\\OrderRepositoryTests.cs",
@@ -80,12 +96,11 @@
               "RelativeToolTip": "ShoppingCartApi.Tests\\Tests\\Repositories\\OrderRepositoryTests.cs",
               "ViewState": "AQIAAFsAAAAAAAAAAAAAAGgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T22:16:10.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T22:16:10.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi\\Repositories\\UserRepository.cs",
@@ -93,12 +108,11 @@
               "RelativeToolTip": "ShoppingCartApi\\Repositories\\UserRepository.cs",
               "ViewState": "AQIAABsAAAAAAAAAAADwv0AAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T21:24:01.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T21:24:01.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi\\Repositories\\ProductRepository.cs",
@@ -110,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PaymentRepository.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi\\Repositories\\PaymentRepository.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi\\Repositories\\PaymentRepository.cs",
@@ -118,12 +132,11 @@
               "RelativeToolTip": "ShoppingCartApi\\Repositories\\PaymentRepository.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAswDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T21:23:45.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T21:23:45.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi\\Repositories\\OrderRepository.cs",
               "RelativeDocumentMoniker": "ShoppingCartApi\\Repositories\\OrderRepository.cs",
@@ -131,12 +144,11 @@
               "RelativeToolTip": "ShoppingCartApi\\Repositories\\OrderRepository.cs",
               "ViewState": "AQIAABgAAAAAAAAAAADwvycAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T21:23:36.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T21:23:36.506Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "OrderDetailRepository .cs",
               "DocumentMoniker": "C:\\Users\\gfern\\OneDrive\\Documents\\Cursos\\asp.net\\ShoppingCartApi\\ShoppingCartApi\\Repositories\\OrderDetailRepository .cs",
               "RelativeDocumentMoniker": "ShoppingCartApi\\Repositories\\OrderDetailRepository .cs",
