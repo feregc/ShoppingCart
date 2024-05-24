@@ -28,7 +28,7 @@ namespace ShoppingCartApi.Tests.Tests.Repositories
         public async Task GetAllClientsAsync_ReturnsAllClients()
         {
             var clients = new List<Client> { new Client { Id = 1, Name = "Client1" }, new Client { Id = 2, Name = "Client2" } };
-            var queryableClients = clients.AsQueryable(); // Convertimos la lista a IQueryable
+            var queryableClients = clients.AsQueryable();
 
             var mockSet = new Mock<DbSet<Client>>();
             mockSet.As<IAsyncEnumerable<Client>>().Setup(m => m.GetAsyncEnumerator(default)).Returns(new TestAsyncEnumerator<Client>(clients.GetEnumerator()));
