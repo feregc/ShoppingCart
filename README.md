@@ -64,10 +64,10 @@ Acá dejo un ejemplo de una consulta para ver un registro:
   SELECT 
      od.Id
     ,o.OrderDate
-	,c.Name
+	  ,c.Name
     ,p.title
-	,p.description
-	,p.category
+	  ,p.description
+	  ,p.category
     ,od.Quantity
   FROM [ShoppingCart].[dbo].[OrderDetails] od
   LEFT JOIN [ShoppingCart].dbo.Orders o ON o.Id = od.OrderId
@@ -77,6 +77,6 @@ Acá dejo un ejemplo de una consulta para ver un registro:
 
 ## Contacto 📞
 
-Para cualquier consulta o soporte técnico, no dudes en contactarme:
+Para cualquier consulta, no dude en contactarme:
 
 - **Correo electrónico:** fgarcia0300@gmail.com
